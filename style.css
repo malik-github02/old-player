@@ -163,11 +163,51 @@ body {
        cursor: pointer;
        border: 3px solid rgb(190, 39, 42);
 }
+.power {
+       width: 20px;
+       height: 25px;
+       background-color: #fff;
+       position: absolute;
+       bottom: 20px;
+       right: 70px;
+       border-radius: 3px;
+       background-color: #be272a;
+       border: 3px solid #ed5650;
+       cursor: pointer;
+}
+.power .turn {
+       width: 8px;
+       height: 100%;
+       background-color: #fff;
+       position: absolute;
+       top: 0;
+       left: 50%;
+       transform: translateX(-50%);
+       transition: 0.1s;
+}
+.power .turn::before {
+       content: '';
+       width: 14px;
+       height: 15px;
+       background-color: #fff;
+       position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
+       top: 100%;
+       transition: 1s;
+       border-radius: 3px 3px 0px 0px;
+}
+#file {
+       display: none;
+}
 .on {
        animation: rotate 1s infinite linear;
 }
 .arm.play-song {
        transform: translateX(-90%) rotate(30deg);
+}
+.turn.turn-on {
+       transform: translateX(-50%) rotateX(180deg);
 }
 @keyframes rotate {
        100% {
